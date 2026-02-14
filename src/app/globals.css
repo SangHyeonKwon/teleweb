@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+:root {
+  --background: #000000;
+  --foreground: #e7e9ea;
+  --primary: #1d9bf0;
+  --primary-hover: #1a8cd8;
+  --secondary: #71767b;
+  --border-color: #2f3336;
+  --hover-color: #080808;
+  --surface-color: #16181c;
+  --danger: #f4212e;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-secondary: var(--secondary);
+  --color-border: var(--border-color);
+  --color-hover: var(--hover-color);
+  --color-surface: var(--surface-color);
+  --color-danger: var(--danger);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px var(--background) inset !important;
+  -webkit-text-fill-color: var(--foreground) !important;
+}
